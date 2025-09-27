@@ -8,10 +8,18 @@ function Header() {
             <div className="nav-inner">
                 <img src={ myLogo } alt="My Logo" className="nav-logo" />
                 <ul className="nav-list">
-                    <li className="nav-item">Home</li>
-                    <li className="nav-item">About</li>
-                    <li className="nav-item">Projects</li>
-                    <li className="nav-item">Contact</li>
+                    <li className="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li className="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li className="nav-item">
+                      <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li className="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
                 </ul>
             </div>
           <a className="btn nav-btn">Download CV</a>
