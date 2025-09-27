@@ -1,0 +1,21 @@
+
+.nav {
+    .container {
+        display: flex;
+    }
+
+    &-inner {
+        display: flex;
+    }
+
+    &-logo {
+        width: 10rem;
+    }
+
+    &-list {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        font-size: 2rem;
+    }
+}
