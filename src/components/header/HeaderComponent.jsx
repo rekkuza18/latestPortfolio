@@ -1,6 +1,6 @@
 import myLogo from "../../assets/logos/renLogo.svg";
 
-function Header() {
+function HeaderComponent() {
   return (
     <header>
       <nav className="container-fluid nav">
@@ -29,4 +29,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderComponent;
