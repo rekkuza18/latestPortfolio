@@ -20,7 +20,7 @@ function HeaderComponent() {
                     <li className="nav-item">
                       <a className="nav-link" href="#">Contact</a>
                     </li>
-                     <li className="nav-item d-lg-none d-md-block">
+                     <li className="nav-item nav-list-btn d-lg-none d-md-block ">
                       <a className="nav-link" href="#">Download CV</a>
                     </li>
                 </ul>

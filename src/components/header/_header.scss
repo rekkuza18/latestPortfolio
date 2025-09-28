@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include breakpointType(lg) {
+        @include breakpoint(lg) {
            justify-content: center;
         }
     }
@@ -18,7 +18,7 @@
     &-inner {
         display: flex;
 
-        @include breakpointType(lg) {
+        @include breakpoint(lg) {
             width: 100%;
             justify-content: space-between;
             align-items: center;
@@ -26,7 +26,7 @@
     }
 
     &-list {
-        @include breakpointType(lg) {
+        @include breakpoint(lg) {
              display: flex;
              flex-direction: column;
         }
@@ -58,11 +58,15 @@
     &-btn {
         @include buttonComponent;
         @include timingFunction;
-        @include breakpointType(lg) {
+        @include breakpoint(lg) {
             display: none;
         }
         &:hover {
             background-color: $secondary-color;
         }
+    }
+
+    &-list-btn {
+        @include buttonComponent;
     }
 }
