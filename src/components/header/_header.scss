@@ -1,5 +1,7 @@
 @use '../../assets/styles/variable' as *;
 @use '../../assets/fonts/font' as *;
+@use '../../assets/styles/breakpoints' as *;
+@use '../../components/header/button' as *;
 
 .nav {
     padding: 2rem 0;
@@ -8,12 +10,27 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include breakpointType(lg) {
+           justify-content: center;
+        }
     }
 
     &-inner {
         display: flex;
+
+        @include breakpointType(lg) {
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
+    &-list {
+        @include breakpointType(lg) {
+             display: flex;
+             flex-direction: column;
+        }
+    }
     &-logo {
         width: 8.5rem;
         margin-right: 2rem;
@@ -38,19 +55,12 @@
         }
     }
 
-
-
     &-btn {
-        background-color: $primary-color;
-        padding:1.4rem 3.6rem;
-        font-size: 1.8rem;
-        color: #fff;
-        text-transform: uppercase;
-        font-family: $bold-font;
-        font-weight: 600;
-        border-radius: 0;
+        @include buttonComponent;
         @include timingFunction;
-
+        @include breakpointType(lg) {
+            display: none;
+        }
         &:hover {
             background-color: $secondary-color;
         }
