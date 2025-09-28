@@ -1,24 +1,20 @@
-$breakpoint-sm: 480px;
-$breakpoint-md: 767px;
-$breakpoint-lg: 991px;
-$breakpoint-xl: 1199px;
+@use "sass:map";
 
-@mixin breakpointType($breakpoint) {
-    @if($breakpoint == sm) {
-        @media screen and (max-width: #{$breakpoint-sm}) {
+$breakpoints: (
+    sm: 480px,
+    md: 767px,
+    lg: 991px,
+    xl: 1199px
+);
+
+@mixin breakpoint($size) {
+   $value: map.get($breakpoints, $size);
+
+   @if ($value) {
+        @media screen and (max-width: #{$value}) {
             @content;
         }
-    } @else if ($breakpoint == md){
-        @media screen and (max-width: #{$breakpoint-md}) {
-            @content;
-        }
-    }  @else if ($breakpoint == lg) {
-        @media screen and (max-width: #{$breakpoint-lg}) {
-            @content;
-        }
-    } @else if ($breakpoint == xl){
-        @media screen and (max-width: #{$breakpoint-xl}) {
-            @content;
-        }
-    }
+   } @else {
+        @warn "Invalid breakpoint input sizes";
+   }
 }
