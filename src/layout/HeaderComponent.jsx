@@ -1,4 +1,5 @@
-import myLogo from "../../assets/logos/renLogo.svg";
+import myLogo from "../assets/logos/renLogo.svg";
+import Button from "../components/Button";
 
 function HeaderComponent() {
   return (
@@ -20,12 +21,12 @@ function HeaderComponent() {
                     <li className="nav-item">
                       <a className="nav-link" href="#">Contact</a>
                     </li>
-                     <li className="nav-item nav-list-btn d-lg-none d-md-block ">
-                      <a className="nav-link" href="#">Download CV</a>
+                     <li className="nav-item d-lg-none d-md-block ">
+                        <Button href="#" btnText="Download CV" />
                     </li>
                 </ul>
             </div>
-          <a className="btn nav-btn">Download CV</a>
+          <Button href="#" btnText="Download CV" className="nav-btn" />
         </div>
       </nav>
     </header>

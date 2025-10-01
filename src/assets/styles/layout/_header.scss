@@ -1,7 +1,7 @@
-@use '../../assets/styles/variable' as *;
-@use '../../assets/fonts/font' as *;
-@use '../../assets/styles/breakpoints' as *;
-@use '../../components/header/button' as *;
+@use '../utils/variable' as *;
+@use '../base/typography' as *;
+@use '../utils/breakpoints' as *;
+@use '../components/button' as *;
 
 .nav {
     padding: 2rem 0;
@@ -53,20 +53,5 @@
             background-color: $secondary-color;
             color: #fff;
         }
-    }
-
-    &-btn {
-        @include buttonComponent;
-        @include timingFunction;
-        @include breakpoint(lg) {
-            display: none;
-        }
-        &:hover {
-            background-color: $secondary-color;
-        }
-    }
-
-    &-list-btn {
-        @include buttonComponent;
     }
 }
