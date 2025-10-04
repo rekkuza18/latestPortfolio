@@ -21,9 +21,3 @@
     }
 
 }
-
-.nav-btn {
-    @include breakpoint(lg) {
-        display: none;
-    }
-}

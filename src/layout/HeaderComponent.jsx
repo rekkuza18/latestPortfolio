@@ -22,11 +22,11 @@ function HeaderComponent() {
                       <a className="nav-link" href="#">Contact</a>
                     </li>
                      <li className="nav-item d-lg-none d-md-block ">
-                        <Button href="#" btnText="Download CV" />
+                        <Button href="#" btnText="Download CV" className="nav-btn-2" />
                     </li>
                 </ul>
             </div>
-          <Button href="#" btnText="Download CV" className="nav-btn" />
+          <Button href="#" btnText="Download CV" className="nav-btn d-none d-lg-block" />
         </div>
       </nav>
     </header>
