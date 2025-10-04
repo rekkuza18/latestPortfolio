@@ -60,6 +60,11 @@ body {
   background-color: #D32F2F;
 }
 
+.nav-btn {
+  background-color: transparent;
+  border: 2px solid #D32F2F;
+}
+
 .nav {
   padding: 2rem 0;
   transition: 0.3s ease-in-out;
