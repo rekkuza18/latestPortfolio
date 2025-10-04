@@ -2,19 +2,22 @@
 @use '../base/typography' as *;
 @use '../utils/breakpoints' as *;
 @use '../components/button' as *;
+@use '../utils/mixin' as *;
 
 .nav {
     padding: 2rem 0;
-
+    @include timingFunction; 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+
         @include breakpoint(lg) {
            justify-content: center;
         }
     }
-
+    
     &-inner {
         display: flex;
 
@@ -25,15 +28,50 @@
         }
     }
 
-    &-list {
-        @include breakpoint(lg) {
-             display: flex;
-             flex-direction: column;
-        }
-    }
     &-logo {
         width: 8.5rem;
         margin-right: 2rem;
+    }
+
+    &-menu-icon {
+        height: 3rem;
+        width: 3.5rem;
+        position: relative;
+        overflow: hidden;
+
+        span {
+            position: absolute;
+            left: 0;
+            width: 100%; 
+            @include timingFunction;
+        }
+
+        span:nth-child(1) {
+            @include menuIcon(0.3, 0.1);
+        }
+
+        span:nth-child(2) {
+            @include menuIcon(0.3, 50, 0.38);
+        }
+
+        span:nth-child(3) {
+            @include menuIcon(0.3, 100, 0.7);
+        }
+
+        &.toggle {
+            span:nth-child(1) {
+               transform: rotate(45deg) translateX(0.9rem) translateY(1rem);
+
+            }
+
+            span:nth-child(2) {
+                transform: translateX(100%);
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg) translateX(0.6rem) translateY(-0.7rem);
+            }
+        }
     }
 
     &-list {
@@ -50,8 +88,64 @@
         @include timingFunction;
 
         &:hover {
-            background-color: $secondary-color;
+            background-color: $primary-color;
             color: #fff;
         }
     }
+
+    @include breakpoint(lg) {
+        & {
+             padding: 0.5rem 0;
+        }
+
+        &-logo {
+            width: 7rem;
+        }
+        
+        &-list {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+            background-color: #fff;
+            top: 0;
+            left:0;
+            right: 0;
+            max-height: 0;
+            transform: translateY(7.5rem);
+            padding-left: 3rem;
+            padding: 0 3rem;
+            overflow: hidden;
+            @include timingFunction;
+            
+            &.toggle {
+               padding: 3rem;
+               max-height: 999px;
+            }
+        }
+
+
+
+        &-item {
+            width: 100%;
+        }
+
+        &-item:nth-child(4) .nav-link{
+            border: none !important;
+        }
+
+        &-link {
+            border-bottom: 1px solid rgba(0, 0, 0, .03);
+            color: $primary-color;
+
+            &:hover {
+                background-color: #F7F7F7;
+                color: $primary-color;
+            }
+        }
+        
+
+    }
 }
+
+

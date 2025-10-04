@@ -1,0 +1,18 @@
+@use './variable' as *;
+
+@mixin timingFunction() {
+    transition: .3s ease-in-out;
+}
+
+@mixin menuIcon($bar-height: 0, $bar-pos: 0, $bar-adjust: null) {
+    height: $bar-height * 1rem;
+    background-color: $primary-color;
+    border-radius: 0.5rem;
+    
+    @if ($bar-adjust == null) {
+        top: $bar-pos;
+    } @else {
+        top: calc($bar-pos * 1% - $bar-adjust * 1rem);
+    }
+  
+}

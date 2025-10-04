@@ -1,13 +1,13 @@
 @use '../utils/variable' as *;
 @use '../base/typography' as *;
 @use '../utils/breakpoints' as *;
-
+@use '../utils/mixin' as *;
 
 .primary-btn {
     font-size: 1.8rem;
     padding:1.4rem 3.6rem;
     text-transform: uppercase;
-    background-color: $primary-color;
+    background-color: $primary-color !important;
     color: #fff;
     font-family: $bold-font;
     font-weight: 600;
@@ -17,7 +17,7 @@
     @include timingFunction;
 
     &:hover {
-        background-color: $secondary-color;
+        background-color: $primary-color;
     }
 
 }
