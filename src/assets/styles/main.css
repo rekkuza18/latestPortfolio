@@ -65,6 +65,16 @@ body {
   border: 2px solid #D32F2F;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: -webkit-sticky;
+  z-index: 9999;
+  margin: 0;
+}
+
 .nav {
   padding: 2rem 0;
   transition: 0.3s ease-in-out;
@@ -196,4 +206,9 @@ body {
   .nav {
     padding: 2rem 1.5rem;
   }
+}
+
+.section2 {
+  margin-top: -125px;
+  height: 1000px;
 }

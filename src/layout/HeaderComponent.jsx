@@ -1,19 +1,38 @@
 import myLogo from "../assets/logos/renLogo.svg";
 import Button from "../components/Button";
-import { useState } from "react";
+import { useState, useEffect, useRef} from "react";
 
 function HeaderComponent() {
-
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      
+        if (!navRef.current) return;
+        const navHeight = navRef.current.clientHeight;
+
+        window.scrollY > navHeight ? setScrolled((scrolled) => true) :setScrolled((scrolled) => false);
+
+    } 
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [])
+
 
   function toggleClass() {
-     setToggle(() => !toggle);
+     setToggle((toggle) => !toggle);
   }
 
   //nav-menu-icon d-lg-none
   return (
-    <header>
-      <nav className="container-fluid nav">
+    <>
+       <header>
+      <nav className={`container-fluid nav ${scrolled ? "fixed" : ""}`} ref={navRef}>
         <div className="container">
             <div className="nav-inner">
 
@@ -48,6 +67,8 @@ function HeaderComponent() {
         </div>
       </nav>
     </header>
+    <div className="section2"></div>
+    </>
   );
 }
 
