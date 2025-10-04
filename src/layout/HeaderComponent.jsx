@@ -26,7 +26,7 @@ function HeaderComponent() {
                     </li>
                 </ul>
             </div>
-          <Button href="#" btnText="Download CV" className="d-none d-lg-block" />
+          <Button href="#" btnText="Download CV" className="nav-btn d-none d-lg-block" />
         </div>
       </nav>
     </header>
