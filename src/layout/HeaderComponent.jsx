@@ -41,7 +41,6 @@ function HeaderComponent() {
      setIsOpen((isOpen) => !isOpen );
   }
 
-  //nav-menu-icon d-lg-none
   return (
     <>
       <header>
