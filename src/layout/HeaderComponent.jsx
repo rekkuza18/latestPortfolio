@@ -36,7 +36,7 @@ function HeaderComponent() {
         <div className="container">
             <div className="nav-inner">
 
-                <img src={ myLogo } alt="My Logo" className="nav-logo" />
+                <img src={ myLogo } alt="My Logo" className="nav-logo" loading="lazy" />
                 
                 <div className={`nav-menu-icon d-lg-none ${toggle ? "toggle" : ""}`} onClick={toggleClass}>
                     <span></span>
@@ -67,7 +67,6 @@ function HeaderComponent() {
         </div>
       </nav>
     </header>
-    <div className="section2"></div>
     </>
   );
 }
