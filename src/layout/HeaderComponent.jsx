@@ -5,6 +5,7 @@ import { useState, useEffect, useRef} from "react";
 function HeaderComponent() {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -14,29 +15,41 @@ function HeaderComponent() {
         if (!navRef.current) return;
         const navHeight = navRef.current.clientHeight;
 
-        window.scrollY > navHeight ? setScrolled((scrolled) => true) :setScrolled((scrolled) => false);
+        window.scrollY > navHeight ? setScrolled(true) : setScrolled(false);
 
     } 
 
+    const handleClick = () => {
+        if (navRef && !navRef.current.contains(event.target)) {
+          setToggle(false);
+          setIsOpen(false);
+        }
+    }
+
+    document.body.addEventListener('click', handleClick);
     window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      document.body.removeEventListener('click', handleClick);
+    };
   }, [])
 
 
   function toggleClass() {
      setToggle((toggle) => !toggle);
+     setIsOpen((isOpen) => !isOpen );
   }
 
   //nav-menu-icon d-lg-none
   return (
     <>
-       <header>
-      <nav className={`container-fluid nav ${scrolled ? "fixed" : ""}`} ref={navRef}>
+      <header>
+       <nav className={`container-fluid nav ${scrolled ? "fixed" : ""}`} ref={navRef}>
         <div className="container">
             <div className="nav-inner">
 
-                <img src={ myLogo } alt="My Logo" className="nav-logo" loading="lazy" />
+                <img src={ myLogo } alt="My Logo" className="nav-logo" loading="lazy"/>
                 
                 <div className={`nav-menu-icon d-lg-none ${toggle ? "toggle" : ""}`} onClick={toggleClass}>
                     <span></span>
@@ -44,7 +57,7 @@ function HeaderComponent() {
                     <span></span>
                 </div>
 
-                <ul className={`nav-list ${toggle ? "toggle" : ""}`}>
+                <ul className={`nav-list ${isOpen ? "toggle" : ""}`}>
                     <li className="nav-item">
                       <a className="nav-link" href="#">Home</a>
                     </li>
