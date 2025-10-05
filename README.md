@@ -1,16 +1,9 @@
-# React + Vite
+# My portfolio created using React JS + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This portfolio website showcases a comprehensive collection of my projects, professional experiences, and achievements. It serves as a central hub where visitors can explore my work, learn more about my background, and understand the value I bring as a developer.
 
-Currently, two official plugins are available:
+Built using React.js and Vite, the portfolio is designed to be fast, responsive, and user-friendly. Each section highlights not only my past projects but also the technologies, tools, and programming languages I’ve used to create them.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The site also provides insight into my skills, coding practices, and problem-solving approach, giving potential employers, collaborators, or clients a clear picture of my expertise and capabilities.
 
-## React Compiler
-
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Feel free to explore the projects showcased here, and don’t hesitate to reach out if you’re interested in learning more about my work or collaborating on future opportunities.
