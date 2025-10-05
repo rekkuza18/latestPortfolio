@@ -1,5 +1,60 @@
+@use '../utils/variable' as *;
+@use '../base/typography' as *;
 
-.home {
+
+.hero {
     margin-top: -12.5rem;
-    height: 2500px;
+    height: 100vh;
+    min-height: 850px;
+    display: flex;
+    align-items: center;
+    background-image: url('src/assets/background/hero-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top right;
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
+
+
+    &-heading {
+        text-transform: uppercase;
+        font-size: 7.9rem;
+        font-family: $bold-font;
+        font-weight: bold;
+        margin-bottom: 0;
+        line-height: 0.9;
+    }
+
+    &-text {
+        font-size: 2.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        span {
+            font-family: $bold-font;
+            font-weight: bold;
+            color: $primary-color;
+        }
+
+    }
+
+    &-description {
+    
+    }
+
+    &-description::before{
+        content: '';
+        display: inline-block;
+        height: 0.3rem;
+        width: 5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 1rem;
+        background-color: #fff;
+        vertical-align: middle;
+    }
+
+    &-btn {
+        margin-top: 3.5rem;
+    }
+
 }

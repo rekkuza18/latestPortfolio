@@ -44,8 +44,16 @@ body {
   color: #fff;
 }
 
+@media screen and (max-width: 767px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 .primary-btn {
   font-size: 1.8rem;
+  display: inline-block;
   padding: 1.4rem 3.6rem;
   text-transform: uppercase;
   background-color: #D32F2F;
@@ -57,7 +65,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 .primary-btn:hover {
-  background-color: #D32F2F;
+  background-color: #a82a2a;
 }
 
 .nav-btn {
@@ -285,7 +293,47 @@ header {
   }
 }
 
-.home {
+.hero {
   margin-top: -12.5rem;
-  height: 2500px;
+  height: 100vh;
+  min-height: 850px;
+  display: flex;
+  align-items: center;
+  background-image: url("src/assets/background/hero-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top right;
+  clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
+}
+.hero-heading {
+  text-transform: uppercase;
+  font-size: 7.9rem;
+  font-family: "montserrat-bold", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 0.9;
+}
+.hero-text {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-text span {
+  font-family: "montserrat-bold", sans-serif;
+  font-weight: bold;
+  color: #D32F2F;
+}
+.hero-description::before {
+  content: "";
+  display: inline-block;
+  height: 0.3rem;
+  width: 5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1rem;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.hero-btn {
+  margin-top: 3.5rem;
 }

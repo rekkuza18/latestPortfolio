@@ -1,4 +1,5 @@
 @use './typography' as *;
+@use '../utils/breakpoints' as *;
 
 * {
     margin: 0;
@@ -14,4 +15,11 @@ body {
     font-family: $light-font;
     background-color: #191919;
     color: #fff;
+}
+
+.container {
+    @include breakpoint(md) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
