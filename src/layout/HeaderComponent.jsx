@@ -15,16 +15,15 @@ function HeaderComponent() {
         if (!navRef.current) return;
         const navHeight = navRef.current.clientHeight;
 
-        window.scrollY > navHeight ? setScrolled((scrolled) => true) :setScrolled((scrolled) => false);
+        window.scrollY > navHeight ? setScrolled(true) : setScrolled(false);
 
     } 
 
     const handleClick = () => {
         if (navRef && !navRef.current.contains(event.target)) {
-          setToggle((toggle) => false);
-          setIsOpen((isOpen) => false);
+          setToggle(false);
+          setIsOpen(false);
         }
-
     }
 
     document.body.addEventListener('click', handleClick);
