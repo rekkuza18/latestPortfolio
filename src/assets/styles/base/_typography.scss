@@ -1,3 +1,4 @@
+@use '../utils/breakpoints' as *;
 
 @font-face {
   font-family: 'montserrat-bold';
@@ -38,3 +39,57 @@ $bold-font: 'montserrat-bold', sans-serif;
 $medium-font: 'montserrat-medium', sans-serif;
 $regular-font: 'montserrat-regular', sans-serif;
 $light-font: 'montserrat-light', sans-serif;
+
+h1 {
+  font-size: 7.9rem;
+  text-transform: uppercase;
+  font-family: $bold-font;
+  font-weight: bold;
+  line-height: 0.9;
+}
+
+h3 {
+  font-size: 5rem;
+  font-family: $bold-font;
+  font-weight: bold;
+}
+
+p {
+  font-size: 2.5rem;
+}
+
+@include breakpoint(lg) {
+    h1 {
+      font-size: 6.9rem;
+    }
+    h3 {
+    font-size: 4rem;
+    }
+    p {
+      font-size: 2.2rem;
+    }
+}
+
+@include breakpoint(md) {
+    h1 {
+      font-size: 5.9rem;
+    }
+     h3 {
+     font-size: 3.5rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+}
+
+@include breakpoint(sm) {
+    h1 {
+      font-size: 4.9rem;
+    }
+    h3 {
+     font-size: 3rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+}

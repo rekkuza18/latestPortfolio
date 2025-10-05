@@ -15,12 +15,17 @@
     border-radius: 0;
     text-decoration: none;
 
-    @include timingFunction;
+    
 
     &:hover {
         background-color: $secondary-color;
     }
 
+    @include timingFunction;
+    @include breakpoint(sm) {
+        font-size: 1.5rem;
+        padding:1.2rem 3.4rem;
+    }
 }
 
 .nav-btn {

@@ -28,6 +28,57 @@
   font-weight: 400;
   font-style: normal;
 }
+h1 {
+  font-size: 7.9rem;
+  text-transform: uppercase;
+  font-family: "montserrat-bold", sans-serif;
+  font-weight: bold;
+  line-height: 0.9;
+}
+
+h3 {
+  font-size: 5rem;
+  font-family: "montserrat-bold", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 6.9rem;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 5.9rem;
+  }
+  h3 {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 4.9rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -46,8 +97,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -62,10 +113,18 @@ body {
   font-weight: 600;
   border-radius: 0;
   text-decoration: none;
-  transition: 0.3s ease-in-out;
 }
 .primary-btn:hover {
   background-color: #a82a2a;
+}
+.primary-btn {
+  transition: 0.3s ease-in-out;
+}
+@media screen and (max-width: 480px) {
+  .primary-btn {
+    font-size: 1.5rem;
+    padding: 1.2rem 3.4rem;
+  }
 }
 
 .nav-btn {
@@ -305,16 +364,15 @@ header {
   background-position: top right;
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
 }
+@media screen and (max-width: 480px) {
+  .hero-wrapper {
+    margin-top: -5.5rem;
+  }
+}
 .hero-heading {
-  text-transform: uppercase;
-  font-size: 7.9rem;
-  font-family: "montserrat-bold", sans-serif;
-  font-weight: bold;
   margin-bottom: 0;
-  line-height: 0.9;
 }
 .hero-text {
-  font-size: 2.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -334,6 +392,36 @@ header {
   background-color: #fff;
   vertical-align: middle;
 }
+@media screen and (max-width: 767px) {
+  .hero-description::before {
+    width: 3rem;
+  }
+}
 .hero-btn {
-  margin-top: 3.5rem;
+  margin-top: 5.5rem;
+}
+@media screen and (max-width: 991px) {
+  .hero-btn {
+    margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero-btn {
+    margin-top: 4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-btn {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero {
+    background-image: url("src/assets/background/hero-background-tablet.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    background-position: top;
+  }
 }
