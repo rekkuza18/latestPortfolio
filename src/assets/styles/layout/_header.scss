@@ -1,8 +1,6 @@
-@use '../utils/variable' as *;
+@use '../utils/' as *;
 @use '../base/typography' as *;
-@use '../utils/breakpoints' as *;
 @use '../components/button' as *;
-@use '../utils/mixin' as *;
 
 header {
     position: sticky;

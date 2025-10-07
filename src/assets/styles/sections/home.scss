@@ -1,6 +1,5 @@
-@use '../utils/variable' as *;
+@use '../utils/' as *;
 @use '../base/typography' as *;
-@use '../utils/breakpoints' as *;
 
 .hero {
     margin-top: -12.5rem;
@@ -8,7 +7,7 @@
     min-height: 850px;
     display: flex;
     align-items: center;
-    background-image: url('src/assets/background/hero-background.jpg');
+    background-image: url('@/assets/background/hero-background.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: top right;
@@ -73,7 +72,7 @@
     }
 
     @include breakpoint(lg) {
-        background-image: url('src/assets/background/hero-background-tablet.jpg');
+        background-image: url('@/assets/background/hero-background-tablet.jpg');
     }
 
     @include breakpoint(sm) {
