@@ -1,7 +1,5 @@
-@use '../utils/variable' as *;
+@use '../utils/' as *;
 @use '../base/typography' as *;
-@use '../utils/breakpoints' as *;
-@use '../utils/mixin' as *;
 
 .primary-btn {
     font-size: 1.8rem;
