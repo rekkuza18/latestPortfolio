@@ -1,14 +1,11 @@
 import { useEffect } from 'react';
-import particleConfig from '../assets/js/particle-config'
+import particleConfig from '../assets/js/particle-config';
 
 function Home() {
 
     useEffect(() => {
-            
-        if (window.particlesJS) {
-            window.particlesJS("particles-js", particleConfig);
-        }
-
+        if (!window.particlesJS) return;
+        window.particlesJS("particles-js", particleConfig);
     }, []);
 
     return(
