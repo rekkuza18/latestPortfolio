@@ -48,7 +48,7 @@ function HeaderComponent() {
         <div className="container">
             <div className="nav-inner">
 
-                <img src={ myLogo } alt="My Logo" className="nav-logo" loading="lazy"/>
+                <img src={ myLogo } alt="My Logo" className="nav-logo" loading="lazy"  />
                 
                 <div className={`nav-menu-icon d-lg-none ${toggle ? "toggle" : ""}`} onClick={toggleClass}>
                     <span></span>
@@ -58,16 +58,16 @@ function HeaderComponent() {
 
                 <ul className={`nav-list ${isOpen ? "toggle" : ""}`}>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Home</a>
+                      <a className="nav-link" href="#" data-link="home">Home</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">About</a>
+                      <a className="nav-link" href="#" data-link="about">About</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Projects</a>
+                      <a className="nav-link" href="#" data-link="projects">Projects</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Contact</a>
+                      <a className="nav-link" href="#" data-link="contact">Contact</a>
                     </li>
                      <li className="nav-item d-lg-none d-flex">
                         <Button href="#" btnText="Download CV" className="nav-btn-2" />

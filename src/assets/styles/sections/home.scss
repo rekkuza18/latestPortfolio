@@ -1,7 +1,10 @@
 @use '../utils/' as *;
 @use '../base/typography' as *;
+@use '../components/bar' as *;
 
 .hero {
+    position: relative;
+    z-index: 200;
     margin-top: -12.5rem;
     height: 100vh;
     min-height: 850px;
@@ -26,7 +29,8 @@
     &-text {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-
+        font-size: 2.5rem;
+        
         span {
             font-family: $bold-font;
             font-weight: bold;
@@ -35,11 +39,7 @@
 
     }
 
-    &-description {
-    
-    }
-
-    &-description::before{
+    &-description::before {
         content: '';
         display: inline-block;
         height: 0.3rem;
@@ -73,9 +73,23 @@
 
     @include breakpoint(lg) {
         background-image: url('@/assets/background/hero-background-tablet.jpg');
+
+        &-text {
+            font-size: 2.2rem;
+        }
     }
 
+    @include breakpoint(md) {
+        &-text {
+            font-size: 2rem;
+        }
+    }
     @include breakpoint(sm) {
         background-position: top;
+
+        &-text {
+            font-size: 1.8rem;
+        }
     }
+
 }
