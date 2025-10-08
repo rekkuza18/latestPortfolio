@@ -6,11 +6,11 @@ function About() {
             <div className="container-fluid">
                 <div className="about-wrapper container">
                     <div className="row">
-                        <div class="col-lg-7 about-image-container">
+                        <div className="col-lg-7 about-image-container">
                              <img src={ aboutImage } className="about-image" alt="about image thumbnail" loading="lazy" />
                        </div>
-                        <div class="col-lg-5 about-description-container">
-                            <h3 class="about-title bar-left">About me</h3>
+                        <div className="col-lg-5 about-description-container">
+                            <h3 className="about-title bar-left">About me</h3>
                             <p>
                                 Hi there! I’m Warren Equinan, a passionate web designer with two years of experience in web design. I am proficient in HTML, CSS (Bootstrap), JavaScript (including jQuery), and PHP, I thrive on crafting visually stunning and user-friendly websites.
                             </p>
