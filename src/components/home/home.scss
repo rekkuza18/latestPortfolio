@@ -1,6 +1,6 @@
-@use '../utils/' as *;
-@use '../base/typography' as *;
-@use '../components/bar' as *;
+@use '../../assets/styles/utils/' as *;
+@use '../../assets/styles/base/typography' as *;
+@use '../../assets/styles/components/bar' as *;
 
 .hero {
     position: relative;
