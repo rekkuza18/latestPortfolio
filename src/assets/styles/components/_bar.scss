@@ -1,0 +1,12 @@
+@use '../utils/' as *;
+
+.bar-left::after {
+    content: '';
+    display: inline-block;
+    height: 0.4rem;
+    width: 20rem;
+    margin-left: 2rem;
+    background-color: $primary-color;
+    vertical-align: middle;
+    margin-top: -1rem;
+}
