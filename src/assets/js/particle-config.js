@@ -7,7 +7,7 @@ const particleConfig = {
     color: { value: "#ffffff" },
     shape: {
       type: "triangle",
-      stroke: { width: 0, color: "#000000" },
+      stroke: { width: 0, color: "#ffff" },
     },
     opacity: { value: 0.1, random: false },
     size: { value: 5, random: true },
