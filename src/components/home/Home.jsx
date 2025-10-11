@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import particleConfig from '../assets/js/particle-config';
+import particleConfig from '../../assets/js/particle-config';
 
 function Home() {
 
