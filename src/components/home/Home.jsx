@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import particleConfig from '../../assets/js/particle-config';
+import Button from '../Button';
 
 function Home() {
 
@@ -15,7 +16,7 @@ function Home() {
                 <p className="hero-text">Hello, My name is</p>
                 <h1 className="hero-heading">Warren Equinan</h1>
                 <p className="hero-text hero-description">A Creative <span>Front-End Web Developer.</span></p>
-                <a href="#about" className="primary-btn hero-btn">READ MORE</a>
+                <Button href="#about" className="hero-btn" btnText="Read More" />
            </div>
         </section>
     )
