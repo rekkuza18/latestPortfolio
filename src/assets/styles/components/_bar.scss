@@ -2,11 +2,16 @@
 
 .bar-left::after {
     content: '';
-    display: inline-block;
-    height: 0.4rem;
-    width: 20rem;
-    margin-left: 2rem;
+    display: inline-flex;
+    height: 0.3rem;
+    width: 100%;
+    max-width: 48%;
+    margin-left: 3rem;
     background-color: $primary-color;
     vertical-align: middle;
     margin-top: -1rem;
+
+    @include breakpoint(xxl) {
+        max-width: 0;
+    }
 }
