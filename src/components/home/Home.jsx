@@ -10,7 +10,7 @@ function Home() {
 
     return(
         <section id="homeSection" className="hero">
-             <div id="particles-js" className="particles"></div>
+           <div id="particles-js" className="particles"></div>
            <div className="container hero-wrapper">
                 <p className="hero-text">Hello, My name is</p>
                 <h1 className="hero-heading">Warren Equinan</h1>

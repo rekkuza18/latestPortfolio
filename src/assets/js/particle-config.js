@@ -1,7 +1,7 @@
 const particleConfig = {
   particles: {
     number: {
-      value: 40,
+      value: 30,
       density: { enable: true, value_area: 800 },
     },
     color: { value: "#ffffff" },
@@ -20,7 +20,7 @@ const particleConfig = {
     },
     move: {
       enable: true,
-      speed: 1.3,
+      speed: 0.8,
       direction: "none",
       random: false,
       straight: false,
